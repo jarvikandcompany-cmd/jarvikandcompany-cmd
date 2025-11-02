@@ -88,6 +88,26 @@ nav a:hover {
   margin-bottom: 8px;
   letter-spacing: 0.5px;
 }
+.album-art {
+  text-align: center;
+  margin: 20px 0 30px 0;
+}
+
+.album-art img {
+  width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(173, 255, 255, 0.4), 
+              0 0 40px rgba(43, 192, 200, 0.3);
+  transition: box-shadow 0.5s ease, transform 0.4s ease;
+}
+
+.album-art img:hover {
+  box-shadow: 0 0 45px rgba(173, 255, 255, 0.8),
+              0 0 60px rgba(43, 192, 200, 0.6);
+  transform: scale(1.02);
+}
+
 
 /* Social Links */
 .social-links {
