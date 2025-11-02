@@ -77,6 +77,18 @@ nav a:hover {
   font-style: italic;
 }
 
+/* Track title labels */
+.track-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* or match your site’s font */
+  font-size: 0.95em;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
 /* Social Links */
 .social-links {
   display: flex;
