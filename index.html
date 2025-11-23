@@ -65,31 +65,32 @@
     </div>
 
     <h3>Also Available On</h3>
+    <label for="other-platforms-select">Select a platform:</label>
+    <select id="other-platforms-select">
+      <option value="https://www.anghami.com/">Anghami</option>
+      <option value="https://www.ami.com/">AMI</option>
+      <option value="https://www.boomplay.com/">Boomplay</option>
+      <option value="https://www.hungama.com/">Hungama</option>
+      <option value="https://www.imusica.com/">iMusica</option>
+      <option value="https://www.inprodicon.com/">InProdicon</option>
+      <option value="https://www.kdigital.com/">KDigital</option>
+      <option value="https://www.kkbox.com/">KKBox</option>
+      <option value="https://www.kuack.com/">Kuack</option>
+      <option value="https://www.lissen.com/">Lissen</option>
+      <option value="https://music.163.com/">NetEase Cloud Music</option>
+      <option value="https://www.nuuday.com/">Nuuday</option>
+      <option value="https://www.peloton.com/">Peloton</option>
+      <option value="https://www.qobuz.com/">Qobuz</option>
+      <option value="https://www.saavn.com/">Saavn</option>
+      <option value="https://www.slacker.com/">Slacker Radio</option>
+      <option value="https://www.synchtank.com/">Synchtank</option>
+      <option value="https://www.tencent.com/en-us/">Tencent Music Entertainment (TME)</option>
+      <option value="https://www.tiktok.com/music">TikTok</option>
+      <option value="https://www.touchtunes.com/">TouchTunes</option>
+      <option value="https://www.trebelmusic.com/">Trebel</option>
+      <option value="https://www.tunedglobal.com/">Tuned Global</option>
+    </select>
     <p class="availability-note">Availability may vary by region. Use the platform homepage to find my album.</p>
-    <ul class="other-platforms-list">
-      <li><a href="https://www.anghami.com/" target="_blank">Anghami</a></li>
-      <li><a href="https://www.ami.com/" target="_blank">AMI</a></li>
-      <li><a href="https://www.boomplay.com/" target="_blank">Boomplay</a></li>
-      <li><a href="https://www.hungama.com/" target="_blank">Hungama</a></li>
-      <li><a href="https://www.imusica.com/" target="_blank">iMusica</a></li>
-      <li><a href="https://www.inprodicon.com/" target="_blank">InProdicon</a></li>
-      <li><a href="https://www.kdigital.com/" target="_blank">KDigital</a></li>
-      <li><a href="https://www.kkbox.com/" target="_blank">KKBox</a></li>
-      <li><a href="https://www.kuack.com/" target="_blank">Kuack</a></li>
-      <li><a href="https://www.lissen.com/" target="_blank">Lissen</a></li>
-      <li><a href="https://music.163.com/" target="_blank">NetEase Cloud Music</a></li>
-      <li><a href="https://www.nuuday.com/" target="_blank">Nuuday</a></li>
-      <li><a href="https://www.peloton.com/" target="_blank">Peloton</a></li>
-      <li><a href="https://www.qobuz.com/" target="_blank">Qobuz</a></li>
-      <li><a href="https://www.saavn.com/" target="_blank">Saavn</a></li>
-      <li><a href="https://www.slacker.com/" target="_blank">Slacker Radio</a></li>
-      <li><a href="https://www.synchtank.com/" target="_blank">Synchtank</a></li>
-      <li><a href="https://www.tencent.com/en-us/" target="_blank">Tencent Music Entertainment (TME)</a></li>
-      <li><a href="https://www.tiktok.com/music" target="_blank">TikTok</a></li>
-      <li><a href="https://www.touchtunes.com/" target="_blank">TouchTunes</a></li>
-      <li><a href="https://www.trebelmusic.com/" target="_blank">Trebel</a></li>
-      <li><a href="https://www.tunedglobal.com/" target="_blank">Tuned Global</a></li>
-    </ul>
   </section>
 
   <footer id="connect">
@@ -111,13 +112,21 @@
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a2e0e6a2c9.js" crossorigin="anonymous"></script>
 
-  <!-- Track selector JS -->
+  <!-- Track and platform selector JS -->
   <script>
     const trackSelect = document.getElementById('track-select');
     const trackPlayer = document.getElementById('track-player');
 
     trackSelect.addEventListener('change', function() {
       trackPlayer.src = this.value;
+    });
+
+    const otherPlatformsSelect = document.getElementById('other-platforms-select');
+    otherPlatformsSelect.addEventListener('change', function() {
+      const url = this.value;
+      if (url) {
+        window.open(url, '_blank');
+      }
     });
   </script>
 </body>
