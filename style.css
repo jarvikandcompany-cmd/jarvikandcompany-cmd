@@ -52,12 +52,12 @@ nav a:hover {
 /* Sections */
 .content-section {
   max-width: 800px;
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 0 20px;
   text-align: center;
 }
 
-.content-section h2 {
+.content-section h2, .content-section h3 {
   font-size: 1.8rem;
   color: #00b8c9;
   margin-bottom: 10px;
@@ -65,38 +65,15 @@ nav a:hover {
   letter-spacing: 0.15em;
 }
 
-.album {
-  margin-top: 40px;
-}
-
-.music-embed {
-  margin-top: 15px;
-  background: rgba(0, 184, 201, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  font-style: italic;
-}
-
-/* Track title labels */
-.track-title {
-  text-align: center;
-  font-family: 'Poppins', sans-serif; /* or match your site’s font */
-  font-size: 0.95em;
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
-  margin-top: 20px;
-  margin-bottom: 8px;
-  letter-spacing: 0.5px;
-}
-
 .album-art img {
-  width: 160px;             /* thumbnail size */
-  max-width: 40vw;          /* responsive scaling */
+  width: 160px;
+  max-width: 40vw;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(173, 255, 255, 0.3),
               0 0 25px rgba(43, 192, 200, 0.2);
   transition: box-shadow 0.5s ease, transform 0.4s ease;
+  margin-bottom: 15px;
 }
 
 .album-art img:hover {
@@ -105,30 +82,116 @@ nav a:hover {
   transform: scale(1.03);
 }
 
-/* Social Links */
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+/* Track Selector */
+#track-select {
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.95rem;
+  background-color: #111;
+  color: #e0e0e0;
+  box-shadow: 0 0 6px rgba(43,192,200,0.3);
 }
 
-.social-links a {
+/* Music Links */
+.music-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.music-btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 184, 201, 0.4);
+}
+
+.music-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 184, 201, 0.7);
+}
+
+/* Platform-specific colors */
+.music-btn.spotify      { background: #1DB954; }
+.music-btn.apple        { background: #FA2F55; }
+.music-btn.youtube      { background: #FF0000; }
+.music-btn.amazon       { background: #FF9900; }
+.music-btn.digital7     { background: #0073e6; }
+
+/* Other Platforms List */
+.availability-note {
+  font-size: 0.85rem;
+  color: #cde7f0;
+  opacity: 0.7;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.other-platforms-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.other-platforms-list li a {
   color: #00b8c9;
   text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.3s;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
-.social-links a:hover {
-  opacity: 0.7;
+.other-platforms-list li a:hover {
+  color: #2bc0c8;
+  text-shadow: 0 0 6px #2bc0c8;
 }
 
 /* Footer */
 footer {
+  background-color: #0b0b0b;
   text-align: center;
-  padding: 40px 10px;
-  font-size: 0.9rem;
-  color: #888;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 20px;
+  color: #cde7f0;
+  border-top: 1px solid rgba(43,192,200,0.4);
+}
+
+footer h2 {
+  color: #2bc0c8;
+  text-shadow: 0 0 10px #2bc0c8;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #cde7f0;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.social-links a:hover {
+  color: #2bc0c8;
+  text-shadow: 0 0 8px #2bc0c8;
+}
+
+footer p {
+  font-size: 0.9em;
+  opacity: 0.7;
 }
